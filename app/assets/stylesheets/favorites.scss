@@ -47,3 +47,9 @@
     border-radius: 5px;
     margin: 18px 5px;
 }
+
+.post p, .post h1, .post quote {
+    display: inline-block;
+    width: 350px;
+    min-height: 200px;
+}

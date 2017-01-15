@@ -16,6 +16,10 @@ var Post = React.createClass({
         if (type == "photo") {
             var photo_urls = this.props.post.photos[0].alt_sizes
             tumblrPost = <img className='tumblr-image' src={photo_urls[0].url} />
+        } else if (type == "text") {
+            tumblrPost = <p>{this.props.post.summary}</p>;
+        } else if (type == "quote") {
+            tumblrPost = <quote>{this.props.post.text}</quote>
         } else {
             tumblrPost = <h1>{type}</h1>
         }
