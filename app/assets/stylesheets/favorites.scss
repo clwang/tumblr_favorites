@@ -1,6 +1,6 @@
 .wrapper {
     width: 50%;
-    height: 800px;
+    min-height: 800px;
 }
 
 .left {
@@ -20,4 +20,25 @@
 .submit-btn {
     margin-top: 10px;
     margin-left: 15px;
+}
+
+.add-btn {
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 5px;
+    width: 120px;
+    height: 40px;
+}
+
+.tumblr-image {
+    width: 350px;
+    height: 200px;
+}
+
+.post {
+    width: 540px;
+    padding: 20px;
+    border: 3px solid darkslategrey;
+    border-radius: 5px;
+    margin: 18px 5px;
 }
