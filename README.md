@@ -1,24 +1,26 @@
-# README
+# Tumblr Favoriting app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A web app that allows you to search tumblr blogs by name and tag. Favorite posts that you like!
 
-Things you may want to cover:
+## Usage
 
-* Ruby version
+Clone/Fork the project. 
 
-* System dependencies
+```ruby
+bundle install
+rails server
+```
 
-* Configuration
 
-* Database creation
+## Tech stack
 
-* Database initialization
+* Ruby on Rails
+* React
+* Bootstrap for styling
 
-* How to run the test suite
+## Shortcomings, issues, potential updates
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Better styling
+* Handling edge cases
+* Tests
+* Add Redux
