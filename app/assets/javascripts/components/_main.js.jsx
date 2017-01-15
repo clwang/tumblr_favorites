@@ -24,16 +24,31 @@ var Main = React.createClass({
     },
 
     fetchSearchResults(blogName, tag) {
-        var url = "https://api.tumblr.com/v2/blog/" + blogName + ".tumblr.com/posts?api_key="
-        var apiKey = "B0nCoFnWYg6puIc052kEJ43TlEAJ2QbMCdozZbARFEo9G0o4x7"
         $.ajax({
-            url: url + apiKey,
+            url: this.generateUrl(blogName, tag),
             method: "GET",
             dataType: "jsonp",
             success: (data) => {
-                this.setState({ posts: data.response.posts })
+                if (data.response.posts) {
+                    this.setState({ posts: data.response.posts });
+                } else {
+                    this.setState({ posts: data.response})
+                }
+                
             }
         });
+    },
+
+    generateUrl(blogName, tag) {
+        var url = "";
+        var apiKey = "B0nCoFnWYg6puIc052kEJ43TlEAJ2QbMCdozZbARFEo9G0o4x7";
+
+        if (blogName === "" && tag.length > 0 )  {
+            url = "https://api.tumblr.com/v2/tagged?tag=" + tag + "&api_key="
+        } else if (blogName.length > 0) {
+            var url = "https://api.tumblr.com/v2/blog/" + blogName + ".tumblr.com/posts?tag=" + tag + "&api_key="
+        }
+        return url + apiKey;
     },
 
     render() {
