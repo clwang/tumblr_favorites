@@ -3,7 +3,7 @@ var Main = React.createClass({
         return (
             <div>
                 <div className="wrapper left">
-
+                    <Search />
                 </div>
                 <div className="wrapper right">
 
