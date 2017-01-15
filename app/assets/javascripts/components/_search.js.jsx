@@ -3,8 +3,8 @@ var Search = React.createClass({
     fetchResults() {
         var blogName = this.refs.blog_name.value;
         var tag = this.refs.tag.value;
-        console.log('the blog search is :', blogName);
-        console.log('the blog tag is :', tag);
+        console.log('fetch results a');
+        this.props.fetchSearchResults(blogName, tag);
     },
 
     render() {
